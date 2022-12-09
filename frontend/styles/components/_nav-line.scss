@@ -1,0 +1,25 @@
+.nav-line {
+  width: 100%;
+  padding: 60px 0;
+  background-color: $main-gray;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+
+  @include _m {
+    padding: 40px 20px;
+  }
+  @include _s {
+    padding: 20px;
+  }
+
+  &__link {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $text-gray;
+    font-size: 22px;
+
+    @include _s {
+      font-size: 20px;
+    }
+  }
+}

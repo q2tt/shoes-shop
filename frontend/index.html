@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Document</title>
+  </head>
+
+  <body id="body">
+    <nav class="nav">
+      <div class="container">
+        <div class="nav__box">
+          <label class="nav__label">
+            <input class="nav__input" id="burgerCheckbox" type="checkbox" />
+            <span class="menu nav__menu">
+              <span class="nav__hamburger hamburger"></span>
+            </span>
+            <ul class="nav__list" id="burgerLinks">
+              <li class="nav__item">
+                <a href="/" class="nav__link burgerItem" data-link>Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="/products" class="nav__link burgerItem" data-link
+                  >Products</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="/about" class="nav__link burgerItem" data-link
+                  >About</a
+                >
+              </li>
+            </ul>
+          </label>
+          <div class="nav__item-logo">
+            <a class="logo" href="/" data-link>|LOGO|</a>
+          </div>
+          <div id="basked" class="nav__basked">
+            <p id="shopCount"></p>
+            <img
+              class="nav__basked-img"
+              src="https://img.icons8.com/ios-glyphs/60/000000/favorite-cart.png"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="bagBox" class="bag-box d-none">
+      <div class="bag">
+        <button id="bagExit" class="bag__btn-exit">
+          <img
+            class="bag__img-exit"
+            src="https://img.icons8.com/glyph-neue/64/000000/delete-sign.png"
+            alt="..."
+          />
+        </button>
+        <h2 class="bag__title">Your BAG</h2>
+
+        <div id="bagItems" class="bag__item-box"></div>
+        <div class="bag__total">
+          <p class="bag__total-title">
+            Total: <span class="bag__total-title" id="totalPrise"></span>
+          </p>
+          <button class="bag__checkout-btn">checkout</button>
+        </div>
+      </div>
+    </section>
+    <div class="main-content">
+      <div class="app" id="app"></div>
+
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__logo-box">
+            <a class="logo footer__logo" href="#">|LOGO|</a>
+          </div>
+          <div class="footer__links">
+            <li class="footer__link">
+              <a href="/" class="nav__link" data-link>Home</a>
+            </li>
+            <li class="footer__link">
+              <a href="/products" class="nav__link" data-link>Products</a>
+            </li>
+
+            <li class="footer__link">
+              <a href="/about" class="nav__link" data-link>About</a>
+            </li>
+          </div>
+          <div class="footer__txt">
+            <p>Lorem ipsum, dolor sit amet laboriosam inventore cupiditate.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./static/js/index.js"></script>
+  </body>
+</html>

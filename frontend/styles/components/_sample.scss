@@ -1,0 +1,105 @@
+.sample {
+  background-color: $main-gray;
+  padding: 20px;
+
+  &__btn-show {
+    display: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: none;
+    background: none;
+    background-image: url("https://img.icons8.com/plumpy/48/000000/down--v1.png");
+    background-size: 30px 30px;
+    cursor: pointer;
+
+    @include _l {
+      display: block;
+    }
+  }
+
+  &__inputs {
+    width: 100%;
+    @include flex-row-btw;
+  }
+
+  &__blocks-hiden {
+    @include _l {
+      display: none;
+    }
+  }
+
+  &__brands {
+    @include flex-column;
+
+    @include _xl {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__brand {
+    display: block;
+    margin-top: 20px;
+    color: $text-gray;
+    font-size: 18px;
+    font-family: "Noto Sans";
+
+    @include _xl {
+      margin-right: 10px;
+      margin-top: 10px;
+      border: 1px solid $brown-color;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    @include _m {
+      font-size: 14px;
+    }
+  }
+
+  &__prises {
+    margin-top: 20px;
+
+    @include _l {
+      margin-top: 15px;
+    }
+  }
+
+  &__label {
+    margin-top: 30px;
+    display: block;
+    font-size: 34px;
+    font-family: "Square Peg";
+    color: $brown-color;
+
+    @include _xl {
+      margin-top: 5px;
+      display: inline;
+    }
+  }
+
+  &__income-num {
+    font-family: "Square Peg";
+    display: block;
+    font-size: 34px;
+    color: $brown-color;
+
+    @include _xl {
+      display: inline;
+      font-size: 24px;
+    }
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.btn-img {
+  background-image: url("https://img.icons8.com/plumpy/48/000000/up--v1.png");
+}

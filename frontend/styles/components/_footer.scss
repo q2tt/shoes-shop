@@ -1,0 +1,50 @@
+.footer {
+  background-color: rgba(187, 187, 187, 0.761);
+  padding: 60px 0 20px 0;
+  color: $black;
+  flex: 0 0 auto;
+
+  @include _s {
+    padding: 15px 0 20px 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-areas: "logo links" "txt txt";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+
+    @include _s {
+      grid-template-rows: 60px 140px 30px;
+      grid-template-areas: "logo logo" "links links" "txt txt";
+    }
+  }
+
+  &__logo-box {
+    grid-area: logo;
+  }
+
+  &__logo {
+    line-height: 40px;
+    height: 40px;
+  }
+
+  &__links {
+    grid-area: links;
+  }
+
+  &__txt {
+    grid-area: txt;
+    color: $brown-color;
+    margin-top: 20px;
+
+    @include _s {
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    list-style-type: none;
+    margin-bottom: 20px;
+  }
+}
