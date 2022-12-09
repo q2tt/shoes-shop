@@ -118,5 +118,3 @@ getEl("burgerLinks").addEventListener("click", function () {
 });
 
 
-
-// slider

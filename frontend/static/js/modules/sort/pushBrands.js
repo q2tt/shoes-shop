@@ -4,7 +4,7 @@ import chooseBrands from "./chouseBrands.js";
 function pushBrands(brands, products) {
   getEl("brands").innerHTML = "";
   for (let i = 0; i < brands.length; i++) {
-    getEl("brands").innerHTML += `<li class="sample__brand" >${brands[i]}</li>`;
+    getEl("brands").innerHTML += `<li class="sample__brand brand" >${brands[i]}</li>`;
   }
 
   let brandBtns = document.getElementsByClassName("brand");
