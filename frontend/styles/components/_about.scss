@@ -1,167 +1,165 @@
 .about {
-  padding: 0 0 100px 0;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "img txt link" "info info info";
+  border-bottom: 3px solid $main-gray;
 
-  @include _s {
-    padding: 0 0 30px 0;
+  @include _xl {
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "link link" "img txt" "info info";
   }
-  &__wrap {
-    @include flex-column;
-  }
-
-  &__wrap-line2 {
-    @include flex-row;
-    justify-content: end;
-    height: 600px;
-
-    @include _xxl {
-      height: 400px;
-    }
-
-    @include _xl {
-      height: 350px;
-    }
-
-    @include _l {
-      flex-direction: column-reverse;
-      height: auto;
-    }
+  @include _l {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "link" "img" "txt" "info";
   }
 
-  &__wrap-line1 {
-    @include flex-row;
-
-    margin-bottom: 10px;
-    height: 600px;
-
-    @include _xxl {
-      height: 400px;
-    }
-
-    @include _xl {
-      height: 350px;
-    }
-
-    @include _l {
-      flex-direction: column;
-      height: auto;
-    }
-  }
-
-  &__box1,
-  &__box4 {
-    width: 1100px;
-    height: 100%;
-
-    @include _xxl {
-      width: 600px;
-    }
-
-    @include _xl {
-      width: 500px;
-    }
-
-    @include _l {
-      width: 100%;
-      height: 400px;
-      margin: 30px 0;
-    }
-
-    @include _m {
-      height: 300px;
-    }
-
-    @include _s {
-      margin: 20px 0;
-    }
-  }
-
-  &__box2 {
-    width: 400px;
-    margin-left: -100px;
-    height: 100%;
-    @include flex-al-centr;
-
-    @include _xxl {
-      width: 500px;
-    }
-
-    @include _xl {
-      text-align: end;
-      width: 450px;
-    }
-
-    @include _l {
-      width: 100%;
-      margin-left: 0;
-      text-align: start;
-    }
-  }
-
-  &__box3 {
-    width: 500px;
-    height: 100%;
-    @include flex-al-centr;
-    z-index: 2;
-
-    @include _l {
-      width: 100%;
-    }
-  }
-
-  &__box4 {
-    margin-left: -100px;
-
-    @include _l {
-      margin-left: 0;
-    }
-  }
-
-  &__img-box1,
-  &__img-box2 {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+  &__img-box {
+    grid-area: img;
+    width: auto;
+    height: 500px;
+    background-image: url("./../img/shoeimages.webp");
     background-repeat: no-repeat;
-    background-position: center center;
-    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-  }
+    background-position: center;
+    background-size: cover;
+    background-size: 100% 100%;
+    margin-right: 70px;
 
-  &__img-box1 {
-    background-image: url("../img/sh.webp");
+    @include _xl {
+      margin-right: 50px;
+    }
+    @include _l {
+      margin-right: 0;
+      margin-bottom: 40px;
+      height: 430px;
+    }
+    @include _s {
+      height: 360px;
+    }
   }
+  &__txt-box {
+    grid-area: txt;
+    margin-right: 50px;
 
-  &__img-box2 {
-    background-image: url("../img/Sky-Penny-Shoot-Select-9.jpeg");
-  }
-
-  &__img {
-    width: 100%;
-    height: auto;
+    @include _xl {
+      margin-right: 0;
+    }
   }
 
   &__title {
-    @include title;
-    margin-bottom: 20px;
     color: $brown-color;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 0.7;
 
     @include _s {
+      font-size: 24px;
       margin-bottom: 10px;
     }
   }
 
   &__txt {
     color: $text-gray;
-    font-size: 22px;
-    line-height: 28px;
-    text-shadow: 0px 2px 3px rgba(63, 24, 24, 0.36),
-      0px 8px 22px rgba(70, 58, 58, 0.13), 0px 2px 10px rgba(109, 80, 67, 0.14);
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.5;
 
     @include _s {
-      font-size: 20px;
-      line-height: 26px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__tel-box {
+    grid-area: link;
+    background-color: $green;
+    border-radius: 20px;
+    height: 120px;
+    width: 200px;
+    padding: 30px;
+
+    @include _xl {
+      margin-bottom: 30px;
+    }
+    @include _s {
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__link-telegram {
+    display: block;
+    background-color: $white;
+    height: 50px;
+    width: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include flex-row;
+    cursor: pointer;
+    border-radius: 4px;
+    color: $brown-color;
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+    margin-top: 26px;
+  }
+  &__link-img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 14px;
+  }
+  &__link-txt {
+    display: block;
+  }
+
+  &__info-box {
+    grid-area: info;
+    @include flex-row;
+    flex-wrap: wrap;
+    margin-top: 80px;
+
+    @include _l {
+      margin-top: 50px;
+    }
+    @include _s {
+      margin-top: 30px;
+      @include flex-column;
+    }
+  }
+
+  &__info {
+    width: 400px;
+    margin-bottom: 40px;
+
+    @include _l {
+      width: 340px;
+    }
+    @include _s {
+      width: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info-title {
+    @include title-h3;
+    margin-bottom: 10px;
+    @include _s {
+      font-size: 16px;
+    }
+  }
+
+  &__info-txt {
+    color: $text-gray;
+    font-size: 18px;
+
+    @include _s {
+      font-size: 16px;
     }
   }
 }
-
-
-

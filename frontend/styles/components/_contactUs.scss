@@ -1,0 +1,423 @@
+.contactUs {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "title title" "contact form";
+  padding: 70px 0;
+  box-sizing: border-box;
+
+  @include _xl {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "title " "contact " "form";
+  }
+
+  @include _m {
+    padding: 50px 0;
+  }
+
+  @include _s {
+    padding: 30px 0;
+  }
+
+  &__title {
+    grid-area: title;
+    @include title;
+    text-align: start;
+    margin-bottom: 34px;
+
+    @include _m {
+      margin-bottom: 24px;
+    }
+
+    @include _s {
+      margin-bottom: 16px;
+      font-size: 28px;
+    }
+  }
+
+  &__wrapper {
+    grid-area: contact;
+    padding-right: 40px;
+  }
+
+  &__form {
+    grid-area: form;
+  }
+
+  &__worker-box {
+    border-bottom: 3px solid $main-gray;
+    padding-bottom: 25px;
+
+    @include _xl {
+      width: 80%;
+    }
+
+    @include _s {
+      width: 100%;
+      border-bottom: 2px solid $main-gray;
+    }
+  }
+
+  &__worker {
+    font-size: 24px;
+    color: $black;
+    line-height: 30px;
+
+    @include _s {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__worker_span {
+    font-size: 18px;
+    color: $text-gray;
+    margin-left: 17px;
+    line-height: 20px;
+
+    @include _s {
+      font-size: 14px;
+      line-height: 24px;
+      margin-left: 10px;
+    }
+  }
+
+  &__link_box {
+    @include flex-row-btw;
+    height: 42px;
+    margin: 30px 0;
+    border-radius: 0 9px 9px 0;
+    box-sizing: border-box;
+    padding-left: 20px;
+
+    @include _xl {
+      width: 80%;
+    }
+
+    @include _m {
+      margin: 10px 0;
+    }
+
+    @include _s {
+      height: 30px;
+    }
+  }
+
+  &__link_box:hover {
+    border: 1px solid $light-green;
+    cursor: pointer;
+
+    @include _m {
+      border: none;
+    }
+  }
+
+  &__link_box:hover &__btn-copy {
+    display: block;
+
+    @include _m {
+      display: none;
+    }
+  }
+
+  &__link {
+    line-height: 40px;
+    font-size: 16px;
+    text-decoration: line;
+    color: $black;
+    @include flex-row;
+
+    @include _s {
+      line-height: 30px;
+    }
+  }
+
+  &__link_svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 22px;
+    margin-top: 5px;
+
+    @include _s {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__svg-copy {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__btn-copy {
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    background-color: $light-green;
+    color: $brown-color;
+    padding: 10px 15px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    line-height: 20px;
+    display: none;
+  }
+
+  &__btn-copy:hover {
+    color: $white;
+  }
+
+  &__location-box {
+    border-top: 3px solid $main-gray;
+    padding: 40px 20px;
+    @include flex-row;
+    box-sizing: border-box;
+
+    @include _xl {
+      width: 80%;
+    }
+
+    @include _m {
+      padding: 20px 20px;
+    }
+
+    @include _s {
+      width: 100%;
+      border-top: 2px solid $main-gray;
+    }
+  }
+
+  &__location {
+    font-size: 16px;
+    color: $black;
+    line-height: 20px;
+
+    @include _s {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+
+.contact-form {
+  background-color: $light-green;
+  border-radius: 7px;
+  border: 1px solid $green;
+  box-sizing: border-box;
+
+  &__top-bl {
+    padding: 30px;
+    border-bottom: 1px solid $green;
+
+    @include _s {
+      padding: 20px;
+    }
+  }
+
+  &__title {
+    @include title;
+    text-align: start;
+    margin-bottom: 14px;
+
+    @include _m {
+      font-size: 26px;
+    }
+
+    @include _s {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__title_email {
+    font-size: 18px;
+    color: $text-gray;
+    margin: 0 0 40px 24px;
+
+    @include _m {
+      font-size: 14px;
+      margin: 0 0 20px 24px;
+    }
+
+    @include _s {
+      margin: 0 0 10px 18px;
+    }
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: $brown-color;
+    line-height: 22px;
+
+    @include _m {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    @include _s {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__label_span {
+    color: #f50a0a;
+  }
+
+  &__messageInp {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid $main-gray;
+    font-size: 16px;
+
+    @include _s {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__input::placeholder {
+    font-size: 12px;
+    color: #4e4a4a;
+    line-height: 20px;
+  }
+
+  &__inputs-box {
+    @include flex-row;
+
+    @include _m {
+      @include flex-column;
+      align-items: center;
+    }
+  }
+
+  &__email-box {
+    margin-right: 20px;
+
+    @include _m {
+      margin: 0 0 14px 0;
+    }
+  }
+
+  &__email-inp {
+    padding: 8px 15px;
+    width: 220px;
+    font-size: 18px;
+    line-height: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid $main-gray;
+    font-size: 16px;
+  }
+
+  &__num-inp {
+    padding: 8px 15px;
+    width: 220px;
+    font-size: 18px;
+    line-height: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid $main-gray;
+    font-size: 16px;
+
+    @include _s {
+      width: 120px;
+    }
+  }
+
+  &__phoneNum-box {
+    @include flex-row;
+  }
+
+  &__country-code {
+    margin-right: 20px;
+  }
+
+  &__country-code_inp {
+    padding: 8px 15px;
+    width: 100px;
+    font-size: 18px;
+    line-height: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid $main-gray;
+    font-size: 16px;
+
+    @include _s {
+      width: 80px;
+    }
+  }
+
+  &__bottom-bl {
+    box-sizing: border-box;
+    padding: 30px;
+    width: 100%;
+
+    @include _s {
+      padding: 20px;
+    }
+  }
+
+  &__submit-btn {
+    display: block;
+    width: 60%;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.787);
+    background-color: $green;
+    color: $white;
+    font-size: 18px;
+
+    @include _s {
+      height: 40px;
+    }
+  }
+
+  &__submit-btn:disabled {
+    box-shadow: none;
+    background-color: #11484863;
+    color: #000000b0;
+  }
+}
+
+.messageForUser {
+  @include flex-row-btw;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #dcedeac4;
+  margin-bottom: 10px;
+  min-height: 60px;
+
+  &__btn {
+    background-color: #dcedeac4;
+    background-color: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  &__txt {
+    color: $brown-color;
+    line-height: 20px;
+    font-size: 16px;
+  }
+
+  &__btn-img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.d-none {
+  display: none;
+}

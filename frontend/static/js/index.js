@@ -11,6 +11,8 @@ import innerShoesBox from "./modules/innerPages/innerShoesBox.js";
 import innerProductsBox from "./modules/innerPages/innrerProductsBox.js";
 import getEl from "./modules/utils /getEl.js";
 import productsData from "./modules/utils /productsData.js";
+import formContactUs from "./modules/formContactUs/formContactUs.js";
+import contactUs from "./modules/aboutPage/contactUs.js";
 
 const pathToRegex = (path) =>
   new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
@@ -65,6 +67,7 @@ const router = async () => {
 
   if (match.route.path === "/") {
     innerShoesBox(productsData);
+    
   } else if (match.route.path === "/products") {
     innerProductsBox(productsData);
     getBrand(productsData);
@@ -85,6 +88,9 @@ const router = async () => {
       }
     }
     showShopBox(chosenProduct);
+  } else if (match.route.path === "/about"){
+    formContactUs();
+    contactUs()
   }
 };
 
@@ -116,5 +122,8 @@ getEl("bagExit").addEventListener("click", function () {
 getEl("burgerLinks").addEventListener("click", function () {
   getEl("burgerCheckbox").checked = false;
 });
+
+  
+
 
 
