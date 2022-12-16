@@ -1,0 +1,139 @@
+
+.slider{
+  margin-bottom: 90px;
+
+  @include _m{
+    margin-bottom: 40px
+  }
+
+  &__title{
+    @include title;
+    margin-bottom: 30px;
+
+    @include _m{
+     font-size: 28px;
+     margin-bottom: 24px;
+    }
+  }
+
+  &__txt{
+    padding: 0 10px;
+    font-size: 20px;
+    color:  $brown-color;
+    text-align: center;
+    margin-bottom: 25px;
+
+    @include _m{
+      font-size: 16px;
+     }
+  }
+
+  &__wrapper{
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+
+    @include _m{
+      width: 80%;
+    }
+  }
+
+  &__carousel{
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  &__carousel::-webkit-scrollbar {
+    height: 0;
+  }
+
+  &__prev, &__next{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  &__prev {
+    top: 50%;
+    left: -60px;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+  
+  &__next {
+    top: 50%;
+    right: -60px;
+    transform: translate(-50%, -50%);
+  }
+
+  &__content {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  &__item {
+    cursor: pointer;
+    width: 280px;
+    height: 280px;
+    transform: perspective(1px) translateZ(0);
+    transition: 0.4s;
+    display: inline-block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-size: contain;
+
+    @include _s{
+      width: 220px;
+    height: 220px;
+    }
+  }
+
+  &__item_txt{
+    letter-spacing: 1.9;
+    color: $white;
+    margin-top: 110px;
+    text-align: center;
+    opacity: 0;
+  }
+
+  &__item:hover &__item_txt{
+   opacity: 1;
+   transition: 1.2s;
+  }
+
+  &__item::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+  }
+
+  .slider__item:before {
+    background: #3b3b3bb5;
+    clip-path: inset(0 0 100%  0);
+    opacity: 1;
+    transition: 0.4s;
+  }
+
+  &__item:hover::before {
+    clip-path: inset(0 0 0 0);
+  }
+
+}
+ 

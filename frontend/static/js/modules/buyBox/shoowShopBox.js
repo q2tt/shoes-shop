@@ -7,7 +7,7 @@ function showShopBox(chosenProduct) {
   getEl("shoesColor").innerHTML = `${chosenProduct.colour}`;
   getEl("shoesName").innerHTML = `${chosenProduct.name}`;
   getEl("shoesImg").src = `https://${chosenProduct.imageUrl}`;
-
+ 
   getEl("buy").addEventListener("click", () => {
     buyProduct(chosenProduct);
   });

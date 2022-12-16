@@ -42,7 +42,7 @@ export default class extends AbstractView {
                                     </select>
                             </form>
                             <p class="shoop-box__card-prise" >$<span id="shoesPrise"></span></p>
-                            <button id="buy" class="shoop-box__btn-byu">BUY</button>
+                            <button id="buy" class="shoop-box__btn-byu">ADD TO BAG</button>
                         </div>
                     </div>
                 </div>

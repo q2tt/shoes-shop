@@ -7,6 +7,7 @@
 @import 'abstracts/variables';
 
 @import 'components/navigation';
+@import 'components/slider';
 @import 'components/shoes';
 @import 'components/products';
 @import 'components/header';
@@ -15,11 +16,13 @@
 @import 'components/sample';
 @import 'components/about';
 @import 'components/contactUs';
+@import 'components/buyersChoise';
 @import 'components/footer';
 
 //  font-family: 'Square Peg', cursive;
 
 // font-family: 'Noto Sans';
+
 body{
     font-family: 'Noto Sans'; 
 }

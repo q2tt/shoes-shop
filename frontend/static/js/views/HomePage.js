@@ -24,7 +24,7 @@ export default class extends AbstractView {
                     <span class="word-8">do </span>
                 </p>
                 
-                <a href="/products" class="header__btn header__btn-gooey" data-link> link
+                <a href="/products" class="header__btn header__btn-gooey" data-link> more
                     <span class="header__btn-blobs">
                     <span></span>
                     <span></span>
@@ -44,8 +44,43 @@ export default class extends AbstractView {
                     </div>
                 </section>
             </div>
+            <section class="slider">
+            <h2 class="slider__title">Show us your schuhs</h2>
+            <p class="slider__txt">Recent shoe upgrade? Mention @LOGO in your post</p>
+            <div id="wrapper" class="slider__wrapper">
+              <div id="carousel" class="slider__carousel">
+                <div class="slider__content" id="sliderContent">
+                  <div class="slider__item" >
+                </div>
+              </div>
+              <button class="slider__prev" id="prev">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="none" d="M0 0h24v24H0V0z" />
+                  <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+                </svg>
+              </button>
+              <button  class="slider__next" id="next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="none" d="M0 0h24v24H0V0z" />
+                  <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+                </svg>
+              </button>
+            </div>
+          </section>
+          <div id="СhosenProductBox" ></div>
+            
+            
         </main>
         `;
   }
 }
-//<a  href="/products" class="header__btn1"  data-link>Show show</a> 

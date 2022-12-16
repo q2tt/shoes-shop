@@ -13,6 +13,9 @@ import getEl from "./modules/utils /getEl.js";
 import productsData from "./modules/utils /productsData.js";
 import formContactUs from "./modules/formContactUs/formContactUs.js";
 import contactUs from "./modules/aboutPage/contactUs.js";
+import sliderData from "./sliderDataObj.js";
+import slider from "./modules/sliders/slider.js";
+import innerSlider from "./modules/innerPages/innerSlider.js";
 
 const pathToRegex = (path) =>
   new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
@@ -37,7 +40,7 @@ const navigateTo = (url) => {
 
 const router = async () => {
   const routes = [
-    { path: "/", view: HomePage },
+    { path: "/", view: HomePage, },
     { path: "/about", view: About },
     { path: "/products", view: Products },
     { path: "/products/:id", view: ProductView },
@@ -67,7 +70,8 @@ const router = async () => {
 
   if (match.route.path === "/") {
     innerShoesBox(productsData);
-    
+    slider()
+    innerSlider(sliderData, productsData);
   } else if (match.route.path === "/products") {
     innerProductsBox(productsData);
     getBrand(productsData);
@@ -76,8 +80,8 @@ const router = async () => {
       innerProductsBox(productsData);
     });
     getEl("showMoreBrands").addEventListener("click", () => {
-      getEl('blockBrands').classList.toggle("d-block")
-      getEl('showMoreBrands').classList.toggle("btn-img");
+      getEl("blockBrands").classList.toggle("d-block");
+      getEl("showMoreBrands").classList.toggle("btn-img");
     });
   } else if (match.route.path === "/products/:id") {
     let productsId = document.location.href.split("/products/")[1];
@@ -88,9 +92,9 @@ const router = async () => {
       }
     }
     showShopBox(chosenProduct);
-  } else if (match.route.path === "/about"){
+  } else if (match.route.path === "/about") {
     formContactUs();
-    contactUs()
+    contactUs();
   }
 };
 
@@ -123,7 +127,8 @@ getEl("burgerLinks").addEventListener("click", function () {
   getEl("burgerCheckbox").checked = false;
 });
 
-  
+
+
 
 
 

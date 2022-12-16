@@ -6,7 +6,7 @@ function buyProduct(chosenProduct) {
   let buyList = JSON.parse(localStorage.getItem("items")) ?? [];
   const select = getEl("size");
   const option = select.options[select.selectedIndex].value;
-
+ 
   let item = {
     name: chosenProduct.brandName,
     img: chosenProduct.imageUrl,
