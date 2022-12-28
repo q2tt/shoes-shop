@@ -19,6 +19,11 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  @mixin flex-row-ard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
   @mixin logo {
     font-weight: 700;
     font-size: 34px;

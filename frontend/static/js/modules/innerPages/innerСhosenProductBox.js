@@ -59,6 +59,7 @@ function innerСhosenProductBox(chosenProduct, productsData) {
   getEl("buy").addEventListener("click", function () {
     buyProduct(product );
   });
+  
 }
 
 export default innerСhosenProductBox;

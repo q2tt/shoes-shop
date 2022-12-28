@@ -15,14 +15,6 @@ function innerProductsBox(products) {
         `;
   }
   getEl("box").innerHTML = innerProducts;
-
-  let cards = document.getElementsByClassName("cardProduct");
-  for (let i = 0; i < products.length; i++) {
-    cards[i].addEventListener("click", function () {
-      let chosenProduct = products[i];
-      showShopBox(chosenProduct);
-    });
-  }
 }
 
 export default innerProductsBox;
