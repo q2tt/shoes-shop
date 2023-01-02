@@ -7,13 +7,7 @@
   }
 
   &__title{
-    @include title;
     margin-bottom: 30px;
-
-    @include _m{
-     font-size: 28px;
-     margin-bottom: 24px;
-    }
   }
 
   &__txt{

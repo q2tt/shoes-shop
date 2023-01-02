@@ -1,5 +1,6 @@
 import ProductView from "./views/ProductView.js";
 import About from "./views/About.js";
+import Brands from "./views/Brands.js";
 import HomePage from "./views/HomePage.js";
 import Products from "./views/Products.js";
 import getBrand from "./modules/sort/getBrands.js";
@@ -16,6 +17,9 @@ import contactUs from "./modules/aboutPage/contactUs.js";
 import sliderData from "./sliderDataObj.js";
 import slider from "./modules/sliders/slider.js";
 import innerSlider from "./modules/innerPages/innerSlider.js";
+import allBrandsCarousel from './modules/sliders/allBrandsCarousel.js'
+import pushBrands from "./modules/sort/pushBrands.js";
+import innerAllBrands from "./modules/innerPages/innerAllBrands.js";
 
 const pathToRegex = (path) =>
   new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
@@ -41,6 +45,7 @@ const navigateTo = (url) => {
 const router = async () => {
   const routes = [
     { path: "/", view: HomePage, },
+    { path: "/brands", view: Brands },
     { path: "/about", view: About },
     { path: "/products", view: Products },
     { path: "/products/:id", view: ProductView },
@@ -72,9 +77,10 @@ const router = async () => {
     innerShoesBox(productsData);
     slider()
     innerSlider(sliderData, productsData);
+    allBrandsCarousel()
   } else if (match.route.path === "/products") {
     innerProductsBox(productsData);
-    getBrand(productsData);
+    getBrand(productsData, pushBrands);
     getPrise(productsData);
     getEl("allBrands").addEventListener("click", () => {
       innerProductsBox(productsData);
@@ -95,6 +101,8 @@ const router = async () => {
   } else if (match.route.path === "/about") {
     formContactUs();
     contactUs();
+  }else if (match.route.path === "/brands") {
+    getBrand(productsData, innerAllBrands);
   }
 };
 
@@ -126,9 +134,5 @@ getEl("bagExit").addEventListener("click", function () {
 getEl("burgerLinks").addEventListener("click", function () {
   getEl("burgerCheckbox").checked = false;
 });
-
-
-
-
 
 

@@ -34,18 +34,21 @@ export default class extends AbstractView {
             </div>
         </header>
         <main>
+       
+
             <div class="container">
             <section class="shoes">
-                    <h2 class="shoes__title">Shoes</h2>
+                    <h2 class="mainTitle shoes__title">Shoes</h2>
                     <div id="shoesBox" class="shoes__box">
                     </div>
-                    <div class="shoes__box">
-                        <a  href="/products"  class="shoes__btn btn draw-border"  data-link> All products</a>  
+                    <div>
+                        <a  href="/products"  class="shoes__btn btnShowMore draw-border"  data-link> All products</a>  
                     </div>
                 </section>
             </div>
+
             <section class="slider">
-            <h2 class="slider__title">Show us your schuhs</h2>
+            <h2 class="mainTitle slider__title">Show us your schuhs</h2>
             <p class="slider__txt">Recent shoe upgrade? Mention @LOGO in your post</p>
             <div id="wrapper" class="slider__wrapper">
               <div id="carousel" class="slider__carousel">
@@ -77,10 +80,55 @@ export default class extends AbstractView {
               </button>
             </div>
           </section>
-          <div id="СhosenProductBox" ></div>
-            
-            
-        </main>
+
+          <section class="topBrands">
+          <h2 class="mainTitle topBrands__title">Top Brands</h2>
+          <div class="marquee topBrands__box">
+            <ul id="marquee-content" class="marquee-content topBrands__content">
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/asos-logo.jpeg" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/converse-logo.png" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/logo-bershka.png" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/logo-crocs.jpeg" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/Nike-Logo.png" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/noak.webp" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/new-balance.png" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/nike-running.png" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/River-Island-Logo-1996.jpeg" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/Teva_logo_Pharmaceutical_Industries.png" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/The-Trefoil-adidas-logo-1.jpeg" alt="logo">
+              </li>
+              <li class="topBrands__item">
+                <img class="topBrands__img" src="/frontend/img/brands/vans.png" alt="logo">
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a  href="/brands"  class="topBrands__btn btnShowMore draw-border"  data-link> All brands</a>  
+        </div>
+        </section>
+        <div id="СhosenProductBox" ></div>  
+      </main>
         `;
   }
 }

@@ -15,7 +15,7 @@
     grid-template-rows: 4fr 1fr;
 
     @include _s {
-      grid-template-rows: 60px 140px 30px;
+      grid-template-rows: 60px 180px 30px;
       grid-template-areas: "logo logo" "links links" "txt txt";
     }
   }

@@ -1,52 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,700;1,100;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,700;1,100;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Square+Peg&display=swap");
 
-@import 'base/reset';
+@import "base/reset";
 
-@import 'abstracts/mixins';
-@import 'abstracts/variables';
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-@import 'components/navigation';
-@import 'components/slider';
-@import 'components/shoes';
-@import 'components/products';
-@import 'components/header';
-@import 'components/bags';
-@import 'components/nav-line';
-@import 'components/sample';
-@import 'components/about';
-@import 'components/contactUs';
-@import 'components/buyersChoise';
-@import 'components/footer';
+@import "components/buttons";
+@import "components/titles";
+
+@import "components/navigation";
+@import "components/slider";
+@import "components/shoes";
+@import "components/topBrands";
+@import "components/products";
+@import "components/header";
+@import "components/bags";
+@import "components/nav-line";
+@import "components/sample";
+@import "components/about";
+@import "components/contactUs";
+@import "components/buyersChoise";
+@import "components/footer";
 
 //  font-family: 'Square Peg', cursive;
 
 // font-family: 'Noto Sans';
 
-body{
-    font-family: 'Noto Sans'; 
+body {
+  font-family: "Noto Sans";
 }
-.container{
-    width: 85%;
-    margin: 0 auto;
+.container {
+  width: 85%;
+  margin: 0 auto;
 
-    @include _m{
-        width: 95%;
-    }
+  @include _m {
+    width: 95%;
+  }
 
-    @include _s{
-        width: 95%;
-    }
+  @include _s {
+    width: 95%;
+  }
 }
-main{
-    width: 100%;
-   
+main {
+  width: 100%;
 }
-.main-content{
-    display: flex;
-flex-direction: column;
-height: 100vh;
+.main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-.app{
-    flex: 1 0 auto;
+.app {
+  flex: 1 0 auto;
 }
