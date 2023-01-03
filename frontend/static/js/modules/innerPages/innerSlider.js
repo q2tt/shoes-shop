@@ -16,7 +16,6 @@ function innerSlider(sliderData, productsData) {
   for (let i = 0; i < sliderData.length; i++) {
     sliderCards[i].addEventListener("click", function () {
       const chosenProduct = sliderData[i];
-     // getEl("СhosenProductBox").classList.toggle("d-none");
       innerСhosenProductBox(chosenProduct, productsData);
     });
   }

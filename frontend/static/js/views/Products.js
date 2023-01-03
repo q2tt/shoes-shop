@@ -19,7 +19,6 @@ export default class extends AbstractView {
           <div class="product">
               <section class="sample">
               <div class="sample__inputs">
-                  <input type="search" class="sample__search">
                   <button id="showMoreBrands" class="sample__btn-show"></button>
               </div>
                  
@@ -34,8 +33,11 @@ export default class extends AbstractView {
                 </div>
                     
               </section>
-             <section id="box" class="product-box"> 
+             <section > 
+              <div id="box" class="product-box"></div>
+              <div id="pagination" class="product__pagination"></div>
              </section>
+             
          </div>
         </main>
        

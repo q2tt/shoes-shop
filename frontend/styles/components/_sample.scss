@@ -44,6 +44,7 @@
     color: $text-gray;
     font-size: 18px;
     font-family: "Noto Sans";
+    cursor: pointer;
 
     @include _xl {
       margin-right: 10px;
@@ -56,6 +57,10 @@
     @include _m {
       font-size: 14px;
     }
+  }
+
+  &__brand:hover{
+    color: $green;
   }
 
   &__prises {

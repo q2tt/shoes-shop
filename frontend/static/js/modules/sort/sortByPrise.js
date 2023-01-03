@@ -1,5 +1,6 @@
-import innerProductsBox from "../innerPages/innrerProductsBox.js";
 import getEl from "../utils /getEl.js";
+import displayPagination from "../pagination/displayPagination.js";
+import displayProducts from "../pagination/displayProducts.js";
 
 function sortByPrise(mainProducts) {
   let selectedPrise = getEl("income").value;
@@ -10,7 +11,11 @@ function sortByPrise(mainProducts) {
       newProducts.push(mainProducts[i]);
     }
   }
-  innerProductsBox(newProducts);
+
+  const productItem = 200;
+  const productsPage = 1;
+  displayProducts(newProducts, productItem, productsPage) ;
+  displayPagination(newProducts, productItem, productsPage );
 }
 
 export default sortByPrise;

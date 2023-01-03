@@ -42,7 +42,7 @@ export default class extends AbstractView {
                     <div id="shoesBox" class="shoes__box">
                     </div>
                     <div>
-                        <a  href="/products"  class="shoes__btn btnShowMore draw-border"  data-link> All products</a>  
+                        <a  href="/products/1"  class="shoes__btn btnShowMore draw-border"  data-link> All products</a>  
                     </div>
                 </section>
             </div>

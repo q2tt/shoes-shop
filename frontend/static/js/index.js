@@ -20,9 +20,13 @@ import innerSlider from "./modules/innerPages/innerSlider.js";
 import allBrandsCarousel from './modules/sliders/allBrandsCarousel.js'
 import pushBrands from "./modules/sort/pushBrands.js";
 import innerAllBrands from "./modules/innerPages/innerAllBrands.js";
+import displayPagination from "./modules/pagination/displayPagination.js";
+import displayProducts from "./modules/pagination/displayProducts.js";
 
 const pathToRegex = (path) =>
   new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
+
+const productItem = 12;
 
 const getParams = (match) => {
   const values = match.result.slice(1);
@@ -47,8 +51,8 @@ const router = async () => {
     { path: "/", view: HomePage, },
     { path: "/brands", view: Brands },
     { path: "/about", view: About },
-    { path: "/products", view: Products },
-    { path: "/products/:id", view: ProductView },
+    { path: "/products/:page", view: Products },
+    { path: "/product/:id", view: ProductView },
   ];
 
   const potentialMatches = routes.map((route) => {
@@ -78,19 +82,27 @@ const router = async () => {
     slider()
     innerSlider(sliderData, productsData);
     allBrandsCarousel()
-  } else if (match.route.path === "/products") {
-    innerProductsBox(productsData);
+  } else if (match.route.path === "/products/:page") {
+    let productsPage = document.location.href.split("/products/")[1];
+   
+    displayProducts(productsData, productItem, productsPage) ;
+    displayPagination(productsData, productItem, productsPage );
+
     getBrand(productsData, pushBrands);
     getPrise(productsData);
+
     getEl("allBrands").addEventListener("click", () => {
-      innerProductsBox(productsData);
+     displayProducts(productsData, productItem, productsPage) ;
+     displayPagination(productsData, productItem, productsPage );
+ 
     });
+    
     getEl("showMoreBrands").addEventListener("click", () => {
       getEl("blockBrands").classList.toggle("d-block");
       getEl("showMoreBrands").classList.toggle("btn-img");
     });
-  } else if (match.route.path === "/products/:id") {
-    let productsId = document.location.href.split("/products/")[1];
+  } else if (match.route.path === "/product/:id") {
+    let productsId = document.location.href.split("/product/")[1];
     let chosenProduct;
     for (let i = 0; i < productsData.length; i++) {
       if (productsData[i].id == productsId) {
@@ -134,5 +146,4 @@ getEl("bagExit").addEventListener("click", function () {
 getEl("burgerLinks").addEventListener("click", function () {
   getEl("burgerCheckbox").checked = false;
 });
-
 

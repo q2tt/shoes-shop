@@ -9,7 +9,7 @@ function innerShoesBox(products) {
     let random = Math.floor(Math.random() * products.length);
     innerProducts += `
                      <div id="${products[random].id}"  class="shoes__card  shoesCardProduct">
-                     <a  href="/products/${products[random].id}" class="shoes__link" data-link></a>
+                     <a  href="/product/${products[random].id}" class="shoes__link" data-link></a>
                         <img class="shoes__card-img" src="https://${products[random].imageUrl}" alt="...">
                         <h3 class="shoes__card-title">${products[random].brandName}</h3>
                         <p class="shoes__card-prise" >$<span>${products[random].price.current.value}</span></p>

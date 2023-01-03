@@ -1,4 +1,6 @@
 import innerProductsBox from "../innerPages/innrerProductsBox.js";
+import displayPagination from "../pagination/displayPagination.js";
+import displayProducts from "../pagination/displayProducts.js";
 
 function chooseBrand(i, brands, products) {
   let brand = brands[i];
@@ -9,7 +11,11 @@ function chooseBrand(i, brands, products) {
       brandProducts.push(products[i]);
     }
   }
-  innerProductsBox(brandProducts);
+  const productItem = 20;
+  const productsPage = 1;
+
+  displayProducts(brandProducts, productItem, productsPage) ;
+  displayPagination(brandProducts, productItem, productsPage );
 }
 
 export default chooseBrand;
